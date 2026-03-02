@@ -1,7 +1,7 @@
 package com.kovanlabs.ecommerce.controller;
 
 import com.kovanlabs.ecommerce.model.ProductModel;
-import com.kovanlabs.ecommerce.services.MySQLService;
+import com.kovanlabs.ecommerce.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
@@ -10,9 +10,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-    private final MySQLService mysqlService;
+    private final ProductService mysqlService;
 
-    public ProductController(MySQLService mysqlService) {
+    public ProductController(ProductService mysqlService) {
         this.mysqlService = mysqlService;
     }
 

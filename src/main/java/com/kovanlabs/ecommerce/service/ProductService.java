@@ -1,4 +1,4 @@
-package com.kovanlabs.ecommerce.services;
+package com.kovanlabs.ecommerce.service;
 
 import com.kovanlabs.ecommerce.model.ProductModel;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MySQLService {
+public class ProductService {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public MySQLService(JdbcTemplate jdbcTemplate) {
+    public ProductService(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

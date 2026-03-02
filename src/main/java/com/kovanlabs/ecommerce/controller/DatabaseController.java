@@ -1,16 +1,12 @@
 package com.kovanlabs.ecommerce.controller;
-import com.kovanlabs.ecommerce.model.ProductModel;
-import com.kovanlabs.ecommerce.services.MySQLService;
+import com.kovanlabs.ecommerce.service.ProductService;
 import org.springframework.web.bind.annotation.*;
-
-import java.sql.SQLException;
-import java.util.List;
 
 @RestController
 public class DatabaseController {
-    private final MySQLService mysqlService;
+    private final ProductService mysqlService;
 
-    public DatabaseController(MySQLService mysqlService) {
+    public DatabaseController(ProductService mysqlService) {
         this.mysqlService = mysqlService;
     }
     @GetMapping("/testdb")
